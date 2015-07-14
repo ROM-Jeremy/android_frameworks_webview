@@ -26,7 +26,7 @@ if [[ $NEWWEBVIEWVERSION != $WEBVIEWVERSION ]]; then
 	7z a -tzip -mx0 ../tmp.zip . 1>/dev/null
 	cd ..
 	rm -rf tmp
-	zipalign -v 4 tmp.zip webview.apk 1>/dev/null
+	/home/ice974/android/sdk/build-tools/22.0.1/zipalign -v 4 tmp.zip webview.apk 1>/dev/null
 	rm tmp.zip
 else
 	echo "Input WebView apk is the same version as before."
